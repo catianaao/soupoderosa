@@ -409,7 +409,17 @@ function App() {
               return (
                 <div style={{ backgroundColor: 'var(--pink-light)', padding: '1.5rem', borderRadius: '15px', marginBottom: '2rem', textAlign: 'center' }}>
                   <h3 style={{ color: 'var(--bordo)', marginBottom: '0.8rem', fontFamily: 'Playfair Display' }}>{titleMsg}</h3>
-                  <p style={{ color: 'var(--bordo-light)', lineHeight: '1.5', fontSize: '0.95rem' }}>{msg}</p>
+                  <p style={{ color: 'var(--bordo-light)', lineHeight: '1.5', fontSize: '0.95rem', marginBottom: '1.5rem' }}>{msg}</p>
+                  <a 
+                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`🌟 Olha o meu progresso de Outubro no Clube das Poderosas! 🌟\n\nConcluí ${completedClasses.length} de ${allClasses.length} aulas na rotina ${userRoutine === 'seca_tudo' ? 'SECA TUDO' : 'MAIS GOSTOSA'}! 🏆\n\nMinha mensagem:\n"${msg}"\n\nVem treinar com a gente! 💪🔥`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', backgroundColor: '#25D366', color: 'white', padding: '0.8rem 1.5rem', fontSize: '1rem', border: 'none' }}
+                    onClick={playClickSound}
+                  >
+                    Compartilhar no WhatsApp 💬
+                  </a>
                 </div>
               );
             })()}
