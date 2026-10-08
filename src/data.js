@@ -205,27 +205,27 @@ export const games = [
     id: 8,
     title: "O Reflexo na Água",
     options: [
-      { id: "a", label: "Lago Plácido e Parado", image: "/lago_placido.jpg", message: "A calma aparente pode estar escondendo emoções estagnadas. Permita-se sentir raiva, tristeza, frustração. Todas as emoções são guias legítimos para a sua libertação." },
-      { id: "b", label: "Rio Corrente e Forte", image: "/rio_corrente.jpg", message: "A pressa de resolver tudo te impede de vivenciar o processo. Nem toda ferida precisa ser limpa imediatamente; algumas só precisam ser sentidas." },
-      { id: "c", label: "Oceano Profundo e Misterioso", image: "/oceano_profundo.jpg", message: "Você mergulha nos problemas dos outros para não precisar encarar as próprias profundezas. Traga o foco de volta para si. A sua salvação é responsabilidade exclusivamente sua." }
+      { id: "a", label: "Lago Plácido e Parado", image: "/22- lago_placido.jpg", message: "A calma aparente pode estar escondendo emoções estagnadas. Permita-se sentir raiva, tristeza, frustração. Todas as emoções são guias legítimos para a sua libertação." },
+      { id: "b", label: "Rio Corrente e Forte", image: "/23- rio_corrente.jpg", message: "A pressa de resolver tudo te impede de vivenciar o processo. Nem toda ferida precisa ser limpa imediatamente; algumas só precisam ser sentidas." },
+      { id: "c", label: "Oceano Profundo e Misterioso", image: "/24- oceano_profundo.jpg", message: "Você mergulha nos problemas dos outros para não precisar encarar as próprias profundezas. Traga o foco de volta para si. A sua salvação é responsabilidade exclusivamente sua." }
     ]
   },
   {
     id: 9,
     title: "A Dança",
     options: [
-      { id: "a", label: "Balé Clássico Disciplinado", image: "/bale_classico.jpg", message: "A autocobrança e a busca pela perfeição estão esgotando as suas reservas de alegria. A vida não é uma performance, você tem o direito de falhar e ainda assim ser amada." },
-      { id: "b", label: "Dança Contemporânea Livre", image: "/danca_livre.jpg", message: "O que você chama de intuição às vezes é ansiedade disfarçada. Aprenda a diferenciar a voz da sabedoria interna do ruído dos seus medos infantis não curados." },
-      { id: "c", label: "Tango Intenso", image: "/tango_intenso.jpg", message: "Na relação com o outro, você tem se projetado demais. O que te irrita no parceiro (ou na parceira) frequentemente aponta para uma parte sua que precisa de atenção e integração." }
+      { id: "a", label: "Balé Clássico Disciplinado", image: "/25- bale_classico.jpg", message: "A autocobrança e a busca pela perfeição estão esgotando as suas reservas de alegria. A vida não é uma performance, você tem o direito de falhar e ainda assim ser amada." },
+      { id: "b", label: "Dança Contemporânea Livre", image: "/26- danca_livre.jpg", message: "O que você chama de intuição às vezes é ansiedade disfarçada. Aprenda a diferenciar a voz da sabedoria interna do ruído dos seus medos infantis não curados." },
+      { id: "c", label: "Tango Intenso", image: "/27- tango_intenso.jpg", message: "Na relação com o outro, você tem se projetado demais. O que te irrita no parceiro (ou na parceira) frequentemente aponta para uma parte sua que precisa de atenção e integração." }
     ]
   },
   {
     id: 10,
     title: "A Vestimenta",
     options: [
-      { id: "a", label: "Vestido Leve e Fluido Rosa Claro", image: "/vestido_rosa.jpg", message: "A fragilidade que você tenta esconder é, na verdade, a sua conexão mais pura com a humanidade. Permitir que o outro veja a sua vulnerabilidade é construir pontes reais." },
-      { id: "b", label: "Alfaiataria Impecável", image: "/alfaiataria.jpg", message: "Você tomou o controle porque confiar era perigoso no passado. Mas hoje, o hiper-controle é o que te aprisiona. Relaxe os ombros; o mundo não vai desmoronar se você descansar." },
-      { id: "c", label: "Manto Aveludado Bordô", image: "/manto_bordo.jpg", message: "Há uma realeza na sua alma que foi negada por pessoas pequenas demais para o seu brilho. Coroe a si mesma. Você já não precisa de permissão para ser quem nasceu para ser." }
+      { id: "a", label: "Vestido Leve e Fluido Rosa Claro", image: "/28- vestido_rosa.jpg", message: "A fragilidade que você tenta esconder é, na verdade, a sua conexão mais pura com a humanidade. Permitir que o outro veja a sua vulnerabilidade é construir pontes reais." },
+      { id: "b", label: "Alfaiataria Impecável", image: "/29- alfaiataria.jpg", message: "Você tomou o controle porque confiar era perigoso no passado. Mas hoje, o hiper-controle é o que te aprisiona. Relaxe os ombros; o mundo não vai desmoronar se você descansar." },
+      { id: "c", label: "Manto Aveludado Bordô", image: "/30- manto_bordo.jpg", message: "Há uma realeza na sua alma que foi negada por pessoas pequenas demais para o seu brilho. Coroe a si mesma. Você já não precisa de permissão para ser quem nasceu para ser." }
     ]
   }
 ];
