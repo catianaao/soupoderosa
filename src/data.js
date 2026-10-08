@@ -171,7 +171,7 @@ export const games = [
     options: [
       { id: "a", label: "Fotografia Antiga Rasgada", image: "/10- foto_antiga.jpg", message: "A nostalgia pode ser um abrigo ou uma prisão. Integrar o passado significa perdoar-se pelo que você não sabia na época. A cura mora no agora." },
       { id: "b", label: "Bilhete Escrito à Mão", image: "/11- bilhete_mao.jpg", message: "As palavras que você diz a si mesma no silêncio da noite importam. Transforme o seu crítico interno em um aliado. Você não é os seus pensamentos mais duros." },
-      { id: "c", label: "Joia Passada de Geração", image: "/12- joia_geracao.jpg", message: "A carga do legado familiar pesa em seus ombros. Mas lembre-se: você pode honrar sua ancestralidade sem precisar repetir as dores e sacrifícios delas." }
+      { id: "c", label: "Joia Passada de Geração", image: "/12- joia_geracao.jpg", message: "Você carrega lindas heranças daqueles que vieram antes de você. Pode ser libertador perceber que você pode honrar as suas raízes enquanto escolhe deixar ir as dores antigas. O amor familiar também vive na liberdade de criar o seu próprio caminho." }
     ]
   },
   {

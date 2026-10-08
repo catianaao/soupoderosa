@@ -458,6 +458,41 @@ function App() {
                 );
               })}
             </div>
+
+            {completedClasses.length === allClasses.length && (
+              <div style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: 'var(--gold)', borderRadius: '15px', textAlign: 'center' }}>
+                <h3 style={{ color: 'white', marginBottom: '0.8rem', fontFamily: 'Playfair Display', fontSize: '1.4rem' }}>Presente Especial de Conclusão! 🎁</h3>
+                <p style={{ color: 'white', marginBottom: '1.5rem', fontSize: '0.95rem', fontWeight: '500' }}>
+                  Como você completou todas as aulas do desafio, você desbloqueou os dois últimos jogos bônus exclusivos!
+                </p>
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <button 
+                    className="btn-primary" 
+                    style={{ backgroundColor: 'white', color: 'var(--gold)', border: 'none', padding: '0.8rem 1.5rem' }}
+                    onClick={() => {
+                      playUnlockSound();
+                      setGameResult(null);
+                      setActiveGame(games[8]);
+                      setIsSummaryOpen(false);
+                    }}
+                  >
+                    ✨ {games[8].title}
+                  </button>
+                  <button 
+                    className="btn-primary" 
+                    style={{ backgroundColor: 'white', color: 'var(--gold)', border: 'none', padding: '0.8rem 1.5rem' }}
+                    onClick={() => {
+                      playUnlockSound();
+                      setGameResult(null);
+                      setActiveGame(games[9]);
+                      setIsSummaryOpen(false);
+                    }}
+                  >
+                    ✨ {games[9].title}
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
