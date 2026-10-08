@@ -51,6 +51,7 @@ function App() {
   const [activeGame, setActiveGame] = useState(null);
   const [gameResult, setGameResult] = useState(null);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
+  const [isSummaryOpen, setIsSummaryOpen] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
 
   const [gameHistory, setGameHistory] = useState(() => {
@@ -275,6 +276,13 @@ function App() {
             {completedClasses.length} de {allClasses.length} aulas concluídas
             {completedClasses.length === allClasses.length && ' 🏆 Desafio concluído!'}
           </p>
+          <button 
+            className="btn-primary" 
+            style={{ marginTop: '1.5rem', alignSelf: 'center', width: 'auto', padding: '0.8rem 2rem' }}
+            onClick={() => { playClickSound(); setIsSummaryOpen(true); }}
+          >
+            📊 Resumo Mensal
+          </button>
         </div>
       </div>
 
@@ -371,6 +379,75 @@ function App() {
                 </button>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Monthly Summary Modal */}
+      {isSummaryOpen && (
+        <div className="modal-overlay" onClick={() => setIsSummaryOpen(false)}>
+          <div className="modal-content" style={{ maxWidth: '600px', maxHeight: '90vh', overflowY: 'auto' }} onClick={e => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+              <h2 className="title" style={{ fontSize: '1.8rem', margin: 0 }}>Seu Progresso de Outubro</h2>
+              <X size={28} cursor="pointer" color="var(--bordo)" onClick={() => { playClickSound(); setIsSummaryOpen(false); }} />
+            </div>
+            
+            {(() => {
+              const perc = completedClasses.length / allClasses.length;
+              let msg = "";
+              let titleMsg = "";
+              if (perc < 0.3) {
+                titleMsg = "Todo começo é importante! 🌱";
+                msg = `Você concluiu ${completedClasses.length} de ${allClasses.length} aulas. Lembre-se que cada pequeno passo conta para uma grande transformação! Que no próximo mês você encontre ainda mais força para cuidar de si. Você é capaz de tudo o que desejar!`;
+              } else if (perc < 0.8) {
+                titleMsg = "Belo trabalho! 👏";
+                msg = `Você concluiu ${completedClasses.length} de ${allClasses.length} aulas! É um ótimo progresso e mostra seu compromisso com você mesma. Continue nesse ritmo e logo isso será um hábito natural e poderoso na sua vida!`;
+              } else {
+                titleMsg = "Incrível! Você é uma verdadeira Poderosa! 👑";
+                msg = `Uau! Você concluiu ${completedClasses.length} de ${allClasses.length} aulas! Sua dedicação foi excepcional. Sinta orgulho de toda a energia que você investiu no seu próprio bem-estar. Que venha o próximo mês!`;
+              }
+              return (
+                <div style={{ backgroundColor: 'var(--pink-light)', padding: '1.5rem', borderRadius: '15px', marginBottom: '2rem', textAlign: 'center' }}>
+                  <h3 style={{ color: 'var(--bordo)', marginBottom: '0.8rem', fontFamily: 'Playfair Display' }}>{titleMsg}</h3>
+                  <p style={{ color: 'var(--bordo-light)', lineHeight: '1.5', fontSize: '0.95rem' }}>{msg}</p>
+                </div>
+              );
+            })()}
+
+            <h3 style={{ color: 'var(--bordo)', marginBottom: '1rem', fontSize: '1.2rem', fontFamily: 'Outfit' }}>Sua jornada:</h3>
+            
+            <div style={{ display: 'grid', gap: '0.8rem' }}>
+              {allClasses.map((cls, idx) => {
+                const done = completedClasses.includes(idx);
+                return (
+                  <div key={idx} style={{ 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    alignItems: 'center',
+                    padding: '0.8rem 1rem',
+                    backgroundColor: done ? 'var(--pink-light)' : '#f9f9f9',
+                    borderRadius: '10px',
+                    border: done ? '1px solid var(--pink-medium)' : '1px solid #eee'
+                  }}>
+                    <span style={{ 
+                      color: done ? 'var(--bordo)' : '#999', 
+                      fontFamily: 'Outfit',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      textDecoration: done ? 'line-through' : 'none',
+                      fontSize: '0.9rem'
+                    }}>
+                      {done && <Trophy size={16} color="var(--gold)" />}
+                      {cls}
+                    </span>
+                    <span style={{ color: done ? 'var(--gold)' : '#ccc', fontWeight: 'bold', flexShrink: 0 }}>
+                      {done ? '✅' : '⏳'}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       )}
